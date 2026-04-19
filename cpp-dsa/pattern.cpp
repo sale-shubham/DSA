@@ -94,32 +94,33 @@ void pattern6(int n)
 
 void pattern7(int n)
 {
-    cout << "Pattern 7" << endl;
+    //  cout << "Pattern 7" << endl;
 
     for (int i = 0; i < n; i++)
     {
         // space
-        for (int j = 0; j < n - i; j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
             cout << " ";
         }
         // star
         for (int j = 0; j < (2 * i) + 1; j++)
         {
-            cout << i;
+            cout << "*";
         }
         // space
-        for (int j = 0; j < n - i; j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
             cout << " ";
         }
         cout << endl;
     }
+    //   cout<< endl;
 }
 
 void pattern8(int n)
 {
-    cout << "Pattern 8" << endl;
+    //  cout << "Pattern 8" << endl;
 
     for (int i = 0; i < n; i++)
     {
@@ -142,6 +143,13 @@ void pattern8(int n)
     }
 }
 
+void pattern9(int n)
+{
+    cout << "pattern 9" << endl;
+    pattern7(n);
+    pattern8(n);
+}
+
 int main()
 {
     int n = 5;
@@ -154,6 +162,6 @@ int main()
     pattern6(n);
     pattern7(n);
     pattern8(n);
-
+    pattern9(n);
     return 0;
 }
