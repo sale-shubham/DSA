@@ -150,6 +150,22 @@ void pattern9(int n)
     pattern8(n);
 }
 
+void pattern10(int n)
+{
+    cout << "pattern 10" << endl;
+    for (int i = 0; i <= 2 * n - 1; i++)
+    {
+        int star = i;
+        if (i > n)
+            star = 2 * n - i;
+        for (int j = 0; j < star; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     int n = 5;
@@ -163,5 +179,6 @@ int main()
     pattern7(n);
     pattern8(n);
     pattern9(n);
+    pattern10(n);
     return 0;
 }
