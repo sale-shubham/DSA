@@ -165,7 +165,53 @@ void pattern10(int n)
         cout << endl;
     }
 }
+void pattern11(int n)
+{
+    cout << "pattern 11" << endl;
 
+    int start = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        if (i % 2 == 0)
+            start = 0;
+        else
+            start = 1;
+        for (int j = 0; j < i; j++)
+        {
+            cout << start << " ";
+            start = 1 - start;
+        }
+
+        cout << endl;
+    }
+}
+
+void pattern12(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        // left pattern
+        for (int j = 0; j < i; j++)
+        {
+            cout << j + 1;
+        }
+
+        // space
+        for (int j = 0; j < 2 * (n - 1 - i); j++)
+        {
+            cout << " ";
+        }
+        int right = i;
+        // right  pattern
+        for (int j = 0; j < i; j++)
+        {
+
+            cout << right;
+            right = right - 1;
+        }
+        cout << endl;
+    }
+}
 int main()
 {
     int n = 5;
@@ -180,5 +226,7 @@ int main()
     pattern8(n);
     pattern9(n);
     pattern10(n);
+    pattern11(n);
+    pattern12(n);
     return 0;
 }
