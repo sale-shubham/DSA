@@ -205,13 +205,61 @@ void pattern12(int n)
         // right  pattern
         for (int j = 0; j < i; j++)
         {
-
             cout << right;
             right = right - 1;
         }
         cout << endl;
     }
 }
+void pattern13(int n)
+{
+    int counter = 1;
+
+    for (int i = 0; i < n; i++)
+    {
+        //  cout<<"i in outer loop"<< i <<endl;
+        for (int j = 0; j <= i; j++)
+        {
+            cout << counter << " ";
+            counter += 1;
+        }
+        cout << endl;
+    }
+}
+
+void pattern14(int n)
+{
+    // char ch = 'A';
+
+    char ch = 'a';
+
+    for (int i = 0; i < n; i++)
+    {
+        //  cout<<"i in outer loop"<< i <<endl;
+        for (int j = 0; j <= i; j++)
+        {
+            cout << ch << " ";
+            ch += 1;
+        }
+        cout << endl;
+    }
+}
+void pattern15(int n)
+{
+    // char ch = 'A';
+    cout<< "pattern 15" << endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        for (char j = 'A'; j <= 'A'+ i; j++)
+        {
+            cout << j << " ";
+            // ch += 1;
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     int n = 5;
@@ -228,5 +276,8 @@ int main()
     pattern10(n);
     pattern11(n);
     pattern12(n);
+    pattern13(n);
+    pattern14(n);
+    pattern15(n);
     return 0;
 }
