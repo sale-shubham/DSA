@@ -247,11 +247,11 @@ void pattern14(int n)
 void pattern15(int n)
 {
     // char ch = 'A';
-    cout<< "pattern 15" << endl;
+    cout << "pattern 15" << endl;
 
     for (int i = 0; i < n; i++)
     {
-        for (char j = 'A'; j <= 'A'+ i; j++)
+        for (char j = 'A'; j <= 'A' + i; j++)
         {
             cout << j << " ";
             // ch += 1;
@@ -260,6 +260,44 @@ void pattern15(int n)
     }
 }
 
+void pattern16(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (char ch = 'A'; ch < 'A' + n - i; ch++)
+        {
+            cout << ch;
+        }
+        cout << endl;
+    }
+}
+
+void pattern17(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (char ch = 'A'; ch <= 'A' + i; ch++)
+        {
+            cout << char(ch + i) << " ";
+        }
+        cout << endl;
+    }
+}
+
+void pattern18(int n)
+{
+    char character = 'A';
+    for (int i = 0; i < n; i++)
+    {
+
+        for (char ch = 'A'; ch <= 'A' + i; ch++)
+        {
+            cout << character << " ";
+        }
+        character = char(character + 1);
+        cout << endl;
+    }
+}
 int main()
 {
     int n = 5;
@@ -279,5 +317,8 @@ int main()
     pattern13(n);
     pattern14(n);
     pattern15(n);
+    pattern16(n);
+    pattern17(n);
+    pattern18(n);
     return 0;
 }
