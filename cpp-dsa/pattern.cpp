@@ -423,9 +423,41 @@ void pattern23(int n)
         cout << endl;
     }
 }
+
+void pattern24(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (i == 0 || j == 0 || i == n - 1 || j == n - 1)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
+void pattern25(int n)
+{
+    cout << "n = " << n << endl;
+    for (int i = 0; i < 2 * n - 1; i++)
+    {
+        for (int j = 0; j < 2 * n - 1; j++)
+        {
+            cout << "" << min(j,i) << " ";
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
-    int n = 5;
+    int n = 2;
 
     simplepattern(n);
     pattern2(n);
@@ -450,5 +482,7 @@ int main()
     pattern21(n);
     pattern22(n);
     pattern23(n);
+    pattern24(n);
+    pattern25(n);
     return 0;
 }
