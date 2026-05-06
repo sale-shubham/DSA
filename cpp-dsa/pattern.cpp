@@ -449,7 +449,11 @@ void pattern25(int n)
     {
         for (int j = 0; j < 2 * n - 1; j++)
         {
-            cout << "" << min(j,i) << " ";
+            int top = i;
+            int left = j;
+            int right = (2 * n - 1) - 1 - j;
+            int down = (2 * n - 1) - 1 - i;
+            cout << n - (min(min(top, down), min(left, right)));
         }
         cout << endl;
     }
@@ -457,7 +461,7 @@ void pattern25(int n)
 
 int main()
 {
-    int n = 2;
+    int n = 4;
 
     simplepattern(n);
     pattern2(n);
